@@ -11,7 +11,7 @@ type Node struct {
 	Right *Node
 }
 
-func InsertNode(num int) *Node {
+func MakeNode(num int) *Node {
 	return &Node{Value: num}
 }
 
@@ -19,13 +19,13 @@ func InsertNode(num int) *Node {
 func (tree *Node) Insert(num int) {
 	if num < tree.Value {
 		if tree.Left == nil {
-			tree.Left = InsertNode(num)
+			tree.Left = MakeNode(num)
 		} else {
 			tree.Left.Insert(num)
 		}
 	} else {
 		if tree.Right == nil {
-			tree.Right = InsertNode(num)
+			tree.Right = MakeNode(num)
 		} else {
 			tree.Right.Insert(num)
 		}
