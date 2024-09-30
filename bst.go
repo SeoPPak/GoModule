@@ -1,4 +1,4 @@
-package tree
+package tbst
 
 import (
 	"fmt"
